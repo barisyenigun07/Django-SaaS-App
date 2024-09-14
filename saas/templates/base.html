@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block head_title %} SaaS {% endblock head_title %}</title>
+    {% load static %}
+    <link href="{% static 'vendors/flowbite.min.css' %}" rel="stylesheet" />
 </head>
 <body>
+    {% include 'nav/navbar.html' %}
     {% block content %}
 
     {% endblock content %}
+    {% load static %}
+    <script src="{% static 'vendors/flowbite.min.js' %}"></script>
 </body>
 </html>
